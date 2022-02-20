@@ -4,4 +4,7 @@ package basetask;
      public void processMouse(Mouse mouse) {
          mouse.printMouseDetails();
      }
+     public void processSouce(Souce souse){
+         souse.printSouceDetails();
+     }
 }
