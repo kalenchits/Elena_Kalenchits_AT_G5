@@ -72,7 +72,7 @@ public class TrainMethodsIf {
     }
 
     public void returnNewBoolean(boolean myBoolean){
-        if(myBoolean == true){
+        if(myBoolean){
             System.out.println( "Я получил на вход значение истины");
         } else{
             System.out.println( "Я получил на вход ложь");
