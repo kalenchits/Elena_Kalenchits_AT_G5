@@ -1,6 +1,6 @@
 package basetask;
 
-/*public class Mouse {
+public class Mouse {
     String name;
     int age;
 
@@ -25,9 +25,9 @@ package basetask;
         this.age = age;
     }
 
-    public void printMouseDetails(name, age){
-        System.out.println( "Я мышь, меня зовут " + name + " и мне " + age " лет");
+    public void printMouseDetails(){
+        System.out.println( "Я мышь, меня зовут " + name + " и мне " + age + " лет");
     }
 }
 
- */
+

@@ -1,9 +1,7 @@
 package basetask;
 
-/* public class TrainMethodsObjects {
-    Mouse mouse = new TrainMethodsObjects();
-    public Mouse processMouse(mouse){
-        
-    }
+ public class TrainMethodsObjects {
+     public void processMouse(Mouse mouse) {
+         mouse.printMouseDetails();
+     }
 }
-*/
