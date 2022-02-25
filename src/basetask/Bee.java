@@ -1,10 +1,10 @@
 package basetask;
 
-/*public class Bee {
+    public class Bee {
     String gender;
     int weight;
 
-    public void Bee (String gender, int weight) {
+    public Bee (String gender, int weight) {
         this.gender = gender;
         this.weight = weight;
     }
@@ -30,5 +30,5 @@ package basetask;
     }
 
 }
-*/
+
 

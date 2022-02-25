@@ -10,7 +10,13 @@ public class TrainMethodsObjectsRunner {
         Souce souse = new Souce("соевый", "красного");
         trainMethodsObjects.processSouce(souse);
 
-        //Bee bee =new Bee("девочка", 1);
-       // trainMethodsObjects.processBee(bee);
+        Bee bee = new Bee("девочка", 10);
+        trainMethodsObjects.processBee(bee);
+
+        Obstacle obstacle = new Obstacle("в виде какой-то ерунды", "небольшое");
+        trainMethodsObjects.processObstacle(obstacle);
+
+        Pineapple pineapple = new Pineapple("гавайский", 5000);
+        trainMethodsObjects.processPineapple(pineapple);
     }
 }

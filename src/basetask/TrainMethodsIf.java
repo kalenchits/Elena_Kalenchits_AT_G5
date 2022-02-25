@@ -23,16 +23,12 @@ public class TrainMethodsIf {
     }
 
     public String returnNewChar(char inputChar) {
-        String inputString = String.valueOf(inputChar);
-        String returnNewCharResult;
-        String condition = "g";
-        if (inputString.equals(condition)) {
-            returnNewCharResult = "go";
+
+        if (inputChar == 'g') {
+            return "go";
         } else {
-            String o = "o";
-            returnNewCharResult = o.concat(inputString);
+            return "o" + inputChar;
         }
-        return returnNewCharResult;
     }
 
     public float returnNewFloat(float inputFloat) {
