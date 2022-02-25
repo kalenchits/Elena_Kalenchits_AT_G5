@@ -9,5 +9,8 @@ public class TrainMethodsObjectsRunner {
 
         Souce souse = new Souce("соевый", "красного");
         trainMethodsObjects.processSouce(souse);
+
+        //Bee bee =new Bee("девочка", 1);
+       // trainMethodsObjects.processBee(bee);
     }
 }
