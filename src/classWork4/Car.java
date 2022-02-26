@@ -4,31 +4,8 @@ import java.util.Arrays;
 
 public class Car extends Vehicle implements Movable{
 
-    String model;
-    Wheel[] wheels;
-
-    public Car(String model, String color, int speed, Wheel[] wheels) {
-        super(color, speed);
-        this.model = model;
-        this.wheels = wheels;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-
-
-    public Wheel[] getWheels() {
-        return wheels;
-    }
-
-    public void setWheels(Wheel[] wheels) {
-        this.wheels = wheels;
+    public Car(String color, int speed, String model, Wheel[] wheels) {
+        super(color, speed, model, wheels);
     }
 
     @Override

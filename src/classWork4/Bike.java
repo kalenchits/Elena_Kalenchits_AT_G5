@@ -2,8 +2,9 @@ package classWork4;
 
 public class Bike extends Vehicle implements Movable{
 
-    public Bike(String color, int speed){
-        super(color, speed);
+
+    public Bike(String color, int speed, String model, Wheel[] wheels){
+        super(color, speed, model, wheels);
     }
 
     @Override

@@ -1,7 +1,7 @@
 package classWork4;
 
 public class Machinary {
-    String name;
+    protected String name;
 
     public Machinary(String name) {
         this.name = name;

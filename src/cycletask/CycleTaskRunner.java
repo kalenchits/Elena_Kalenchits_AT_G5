@@ -12,13 +12,12 @@ public class CycleTaskRunner {
         oddNumbers.printOddNumbers();
         System.out.println(" -- вывод нечетных чисел от 3 до 19");
 
-        RandomArray randomArray = new RandomArray();
-        randomArray.fillRandomArray();
-        int[] newArray = randomArray.fillRandomArray();
+        int[] newArray = RandomArray.fillRandomArray();
 
         PrintArray printArray = new PrintArray();
         printArray.printArray(newArray);
         System.out.println(" -- вывод ранее созданного массива");
+        // вывод массива System.out.print(Arrays.toString(newArray));
 
         PrintReversedArray printReversedArray = new PrintReversedArray();
         printReversedArray.printReversedArray(newArray);
@@ -27,7 +26,7 @@ public class CycleTaskRunner {
         PrintX5Array printX5Array = new PrintX5Array();
         printX5Array.printX5Array(newArray);
         System.out.println(" -- вывод ранее созданного массива, каждый элемент умножен на 5");
-
+        
         PrintPow2Array printPow2Array = new PrintPow2Array();
         printPow2Array.printPow2Array(newArray);
         System.out.println(" -- вывод ранее созданного массива, каждый элемент возведен в квадрат");
@@ -44,7 +43,7 @@ public class CycleTaskRunner {
         sortDescArray.sortDesc(newArray);
         System.out.println(" -- массив отсортирован по убыванию");
 
-        // вывод массива System.out.print(Arrays.toString(randomArray));
+
 
     }
 

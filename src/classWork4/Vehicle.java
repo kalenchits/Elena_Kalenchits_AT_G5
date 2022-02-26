@@ -2,13 +2,17 @@ package classWork4;
 
 public abstract class Vehicle extends Machinary{
 
-    String color;
-    int speed;
+    protected String color;
+    protected int speed;
+    protected String model;
+    protected Wheel[] wheels;
 
-    public Vehicle(String color, int speed) {
+    public Vehicle(String color, int speed, String model, Wheel[] wheels) {
         super("Vehicle");
         this.color = color;
         this.speed = speed;
+        this.model = model;
+        this.wheels = wheels;
     }
 
     public String getColor() {
@@ -27,5 +31,19 @@ public abstract class Vehicle extends Machinary{
         this.speed = speed;
     }
 
+    public String getModel() {
+        return model;
+    }
 
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public Wheel[] getWheels() {
+        return wheels;
+    }
+
+    public void setWheels(Wheel[] wheels) {
+        this.wheels = wheels;
+    }
 }
