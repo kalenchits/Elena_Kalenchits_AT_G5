@@ -16,11 +16,13 @@ public class Bottle {
         }
         this.water.pump(bubbles);
 
+
     }
 
     // как передалать созданный массив в метод
-    /* public void open(){
-        water.degas(bubbles);
+    public void open(){
+        water.degas();
     }
-    */
+
+
 }
