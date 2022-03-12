@@ -2,10 +2,10 @@ package main.java.project.bubbles;
 
 public abstract class Water {
 
-    private String color;
-    private String transparency;
-    private String smell;
-    private int temperature;
+    public String color;
+    public String transparency;
+    public String smell;
+    public int temperature;
 
     public Water(String color, String transparency, String smell, int temperature) {
         this.color = color;

@@ -8,13 +8,18 @@ public class SparklingWater extends Water implements Runnable{
     private Bubble bubble = new Bubble("CO2");
     private Bubble[] bubbles;
     private boolean isOpened;
+    private int firstFilledElement;
 
     public SparklingWater(String color, String transparency, String smell, int temperature) {
         super(color, transparency, smell, temperature);
     }
 
-    private void checkIsOpened(){
-        Thread thread = run() -> {
+    public void setOpened(boolean isOpened){
+        this.isOpened = isOpened;
+    }
+
+    public void checkIsOpened(){
+        Thread thread = new Thread(() -> {
             while (!isOpened) {
                 System.out.println("Bottle is closed..");
                 try {
@@ -23,8 +28,16 @@ public class SparklingWater extends Water implements Runnable{
                     e.printStackTrace();
                 }
             }
-            degas();
-        };
+            try {
+                //while (firstFilledElement < bubbles.length){
+                    degas();
+                    //Thread.sleep(1000);
+                //}
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        });
         thread.start();
     }
 
@@ -32,15 +45,28 @@ public class SparklingWater extends Water implements Runnable{
            this.bubbles = bubbles;
     }
 
-    public void degas(){
+    public int degas() throws InterruptedException {
 
-        for (int i = bubbles.length - 1; i > (-1); i--){
-            this.bubble.Cramp();
-            bubbles[i] = null;
+        while (firstFilledElement < bubbles.length) {
+
+            for (int i = 0; i < 10 + 5 * getTemperature(); i++) {
+                if (firstFilledElement < bubbles.length) {
+                    this.bubble.Cramp();
+                    bubbles[firstFilledElement] = null;
+                    firstFilledElement++;
+                } else {
+                    System.out.println("массив закончился");
+                    break;
+                }
+            }
+            System.out.println("degas water");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
-
-        System.out.println("degas water");
-
+        return firstFilledElement;
     }
 
     @Override
