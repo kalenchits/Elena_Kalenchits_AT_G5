@@ -29,14 +29,10 @@ public class SparklingWater extends Water implements Runnable{
                 }
             }
             try {
-                //while (firstFilledElement < bubbles.length){
                     degas();
-                    //Thread.sleep(1000);
-                //}
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         });
         thread.start();
     }

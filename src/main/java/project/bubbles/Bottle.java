@@ -1,15 +1,18 @@
 package main.java.project.bubbles;
 
-import main.java.tasks.classwork.classWork7.B;
-
 public class Bottle {
 
     private double volume;
     private int temperature;
     SparklingWater water = new SparklingWater("no", "yes", "no",0);
+    //private SparklingWater water;
 
 
     public Bottle(double volume, int temperature) {
+
+        //SparklingWater water = new SparklingWater("no", "yes","no", temperature);
+        //так не прокатывает
+
         this.volume = volume;
         Bubble[] bubbles = new Bubble[(int) (volume * 10000)];
         for (int i = 0; i < bubbles.length; i++){
@@ -21,10 +24,15 @@ public class Bottle {
 
     public void open(){
         this.water.setOpened(true);
-    }
+        Thread thread = new Thread(() -> {
+            try {
+                water.degas();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+        thread.start();
 
-    public void checkIsOpenedBottle(){
-        water.checkIsOpened();
     }
 
     public void warm(int temperature){
