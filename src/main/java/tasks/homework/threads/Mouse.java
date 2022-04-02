@@ -9,8 +9,12 @@ public class Mouse {
         this.name = "Mouse <" + number + ">";
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void peep(){
-        System.out.println(name + "PEEP");
+        System.out.println(name + " PEEP!");
         try{
             Thread.sleep(200);
         } catch (InterruptedException e){
