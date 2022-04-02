@@ -1,8 +1,11 @@
 package main.java.tasks.classwork.classWork2;
 
+import java.util.List;
 import java.util.Random;
 
 public class Arrays {
+    public static List<String> asList;
+
     public static void main(String[] args) {
         int[] array = new int[10];
         Random random = new Random();
