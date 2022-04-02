@@ -11,7 +11,7 @@ public class Task_1_1 {
         //Мыши укладываются в список
         List<Thread> threads = new ArrayList<>();
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 5; i++) {
             threads.add(new Thread(() -> {
 
                 List<Mouse> mice = new ArrayList<>();
